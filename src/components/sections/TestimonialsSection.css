@@ -1,0 +1,176 @@
+/* Testimonials Section - Minimal Floating Text Slider (Matching Reference) */
+
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  padding: 3.5rem 2rem;
+  background-color: var(--color-bg-primary);
+  background-image: url('../../assets/images/common/story-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-bottom: 1px solid var(--color-border-silver);
+  overflow: hidden;
+}
+
+.testimonials-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(18, 18, 20, 0.88) 0%,
+    rgba(12, 12, 14, 0.96) 100%
+  );
+  z-index: 1;
+}
+
+.testimonials-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Minimalist Quote Wrapper (No Card, No Border, Pure Floating Text) */
+.testimonial-content-wrapper {
+  position: relative;
+  padding: 0 4rem;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+.testimonial-display.animating {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Gold Quote Icon */
+.quote-mark {
+  font-family: Georgia, serif;
+  font-size: 4.25rem;
+  line-height: 0.6;
+  color: #c5a880; /* Warm Gold Tone matching Reference */
+  opacity: 0.9;
+}
+
+/* Floating Italicized Quote Text */
+.testimonial-text {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #ffffff;
+  font-style: italic;
+  margin: 0.5rem 0 1rem 0;
+  letter-spacing: 0.01em;
+  max-width: 960px;
+}
+
+/* Gold Client Name */
+.client-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #c5a880; /* Warm Gold Tone matching Reference */
+}
+
+/* Minimal Circular Arrow Controls */
+.t-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.t-arrow svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.t-arrow-prev {
+  left: 0;
+}
+
+.t-arrow-next {
+  right: 0;
+}
+
+.t-arrow:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.t-arrow-prev:hover svg {
+  transform: translateX(-2px);
+}
+
+.t-arrow-next:hover svg {
+  transform: translateX(2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 3rem 1.25rem;
+    background-attachment: scroll;
+  }
+
+  .testimonial-content-wrapper {
+    padding: 0 2.5rem;
+  }
+
+  .t-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .t-arrow-prev {
+    left: -0.5rem;
+  }
+
+  .t-arrow-next {
+    right: -0.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.975rem;
+    line-height: 1.7;
+  }
+
+  .client-name {
+    font-size: 1.1rem;
+  }
+}

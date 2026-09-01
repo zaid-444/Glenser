@@ -1,0 +1,125 @@
+/* Story Section - Dark Luxury Interior Overlay */
+
+.story-section {
+  position: relative;
+  width: 100%;
+  padding: 3.5rem 2rem;
+  background-color: var(--color-bg-primary);
+  background-image: url('../../assets/images/common/story-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border-silver);
+  border-bottom: 1px solid var(--color-border-silver);
+}
+
+/* Dark Moody Overlay */
+.story-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(18, 18, 20, 0.85) 0%,
+    rgba(14, 14, 16, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+/* Centered Content Container */
+.story-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Title */
+.story-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Subtle Metallic & Wine Red Highlight Line Under Title */
+.story-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, var(--color-accent-silver) 100%);
+  margin: 0.85rem auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(217, 59, 60, 0.4);
+}
+
+/* Narrative Copy */
+.story-description {
+  font-size: 1.175rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+/* READ MORE Pill Button (Non-functional / Decorative) */
+.story-btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border-silver);
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+.story-btn:hover {
+  color: var(--color-accent-platinum);
+  border-color: var(--color-brand-red);
+  background: rgba(217, 59, 60, 0.15);
+  box-shadow: 0 0 20px rgba(226, 232, 240, 0.15), 0 0 10px rgba(217, 59, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .story-section {
+    padding: 4.5rem 1.5rem;
+    background-attachment: scroll;
+  }
+
+  .story-title {
+    font-size: 1.75rem;
+  }
+
+  .story-description {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .story-btn {
+    padding: 0.65rem 2rem;
+    font-size: 0.8rem;
+  }
+}

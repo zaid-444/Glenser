@@ -1,0 +1,197 @@
+/* Portfolio Section - Dark Luxury Grid & Scroll Reveal Styling */
+
+.portfolio-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border-silver);
+}
+
+.portfolio-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* Section Header */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.portfolio-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, var(--color-accent-silver) 100%);
+  margin: 0.85rem auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(217, 59, 60, 0.4);
+}
+
+/* 3-Column Grid Layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+/* Individual Portfolio Card */
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  border: none;
+  will-change: transform, opacity;
+}
+
+/* Scroll Reveal Initial & Active State */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image Container - Completely Borderless */
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background-color: #1a1a1e;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+
+/* Card Description / Title Below Image */
+.card-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+  margin: 0;
+  transition: color 0.35s ease;
+}
+
+/* Reference Card Hover Physics (Applied when card is visible) */
+.portfolio-card.is-visible:hover {
+  transform: translateY(-8px);
+}
+
+.portfolio-card.is-visible:hover .card-image-wrapper {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.65);
+}
+
+.portfolio-card.is-visible:hover .card-image {
+  transform: scale(1.03);
+}
+
+.portfolio-card.is-visible:hover .card-title {
+  color: var(--color-brand-red);
+}
+
+/* Show More Button Action Container */
+.portfolio-actions {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border-silver);
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.show-more-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn:hover {
+  color: var(--color-accent-platinum);
+  border-color: var(--color-brand-red);
+  background: rgba(217, 59, 60, 0.15);
+  box-shadow: 0 0 20px rgba(226, 232, 240, 0.15), 0 0 10px rgba(217, 59, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+.show-more-btn.expanded svg {
+  transform: rotate(180deg);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+}

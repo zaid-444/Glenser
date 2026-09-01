@@ -1,0 +1,300 @@
+/* Header Component - Metallic Silver & Dark Charcoal Luxury Styling */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-bg-header-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border-silver);
+  box-shadow: var(--shadow-silver-subtle);
+  transition: var(--transition-smooth);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--container-padding);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* Brand / Logo Section with Glowing Lamp Effect */
+.header-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+/* Bulb Glow Aura Directly Under Logo Lamp Bulb */
+.header-brand::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 16.5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 235, 150, 1) 0%, rgba(255, 185, 50, 0.8) 45%, rgba(217, 59, 60, 0.4) 75%, transparent 100%);
+  filter: blur(2.5px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.6);
+}
+
+/* Straight Vertical Downward Light Cone Projection Beam */
+.header-brand::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -2px;
+  width: 58px;
+  height: 85px;
+  background: linear-gradient(180deg, rgba(255, 235, 150, 0.28) 0%, rgba(217, 59, 60, 0.1) 60%, transparent 100%);
+  clip-path: polygon(25% 0%, 42% 0%, 95% 100%, 0% 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-2px) scaleY(0.95);
+}
+
+.header-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s ease, filter 0.35s ease, opacity 0.35s ease;
+}
+
+/* On Logo Hover: Bulb Lights Up + Light Beam Casts Across Header */
+.header-brand:hover::before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.header-brand:hover::after {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+}
+
+.header-brand:hover .header-logo {
+  opacity: 1;
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 6px rgba(255, 235, 150, 0.7)) drop-shadow(0 0 15px rgba(217, 59, 60, 0.4));
+}
+
+/* Center Navigation Links */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.925rem;
+  font-weight: 450;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Metallic Platinum Underline Animation with Wine Red Accent */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, var(--color-accent-silver) 100%);
+  border-radius: 1px;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 6px rgba(226, 232, 240, 0.4);
+}
+
+.nav-link:hover {
+  color: var(--color-accent-silver);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Right Side - Social Links */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-silver);
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: fill 0.25s ease, transform 0.25s ease;
+}
+
+.social-link:hover {
+  color: var(--color-accent-platinum);
+  border-color: var(--color-brand-red);
+  background-color: rgba(217, 59, 60, 0.12);
+  box-shadow: 0 0 12px rgba(226, 232, 240, 0.15), 0 0 6px rgba(217, 59, 60, 0.2);
+  transform: translateY(-2px);
+}
+
+.social-link:hover svg {
+  transform: scale(1.08);
+}
+
+/* Mobile Hamburger Button */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border-silver);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: var(--transition-smooth);
+}
+
+.mobile-menu-toggle:hover {
+  border-color: var(--color-accent-silver);
+  box-shadow: 0 0 8px rgba(226, 232, 240, 0.2);
+}
+
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  margin: 2.5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--color-accent-silver);
+}
+
+.mobile-menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--color-accent-silver);
+}
+
+/* Mobile Dropdown Menu */
+.mobile-menu {
+  display: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .header-nav,
+  .header-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-mobile-menu);
+    border-bottom: 1px solid var(--color-border-silver);
+    padding: 1.75rem 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(226, 232, 240, 0.04);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+  }
+
+  .mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.05rem;
+    font-weight: 450;
+    letter-spacing: 0.04em;
+    color: var(--color-text-primary);
+    display: block;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--color-border-silver);
+    transition: color 0.25s ease, padding-left 0.25s ease;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--color-accent-silver);
+    padding-left: 0.5rem;
+  }
+
+  .mobile-socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.75rem;
+  }
+}
