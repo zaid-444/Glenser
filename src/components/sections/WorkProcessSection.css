@@ -1,0 +1,253 @@
+/* Work Process Section - Vertical Timeline Styling */
+
+.work-process-section {
+  position: relative;
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border-silver);
+  border-bottom: 1px solid var(--color-border-silver);
+  overflow: hidden;
+}
+
+.work-process-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header Styling */
+.work-process-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.work-process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.work-process-title::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, var(--color-accent-silver) 100%);
+  margin: 0.85rem auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(217, 59, 60, 0.4);
+}
+
+.work-process-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin: 1.5rem auto 0 auto;
+}
+
+/* Timeline Track Wrapper */
+.timeline-wrapper {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Central Vertical Metallic Timeline Spine Line */
+.timeline-spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(226, 232, 240, 0.08) 0%,
+    rgba(226, 232, 240, 0.35) 20%,
+    rgba(217, 59, 60, 0.5) 50%,
+    rgba(226, 232, 240, 0.35) 80%,
+    rgba(226, 232, 240, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+/* Individual Timeline Step Row */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.5rem;
+  z-index: 2;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Left vs Right Alignment on Desktop */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+/* Timeline Node Circle in Center */
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #18181c;
+  border: 1px solid var(--color-border-silver);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a880; /* Warm Gold Tone */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 10px rgba(226, 232, 240, 0.05);
+  z-index: 3;
+  transition: all 0.4s ease;
+}
+
+.timeline-node svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Step Card Box */
+.timeline-card {
+  width: 44%;
+  padding: 2rem 2.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card Header: Step Badge & Title */
+.step-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-red);
+  background: rgba(217, 59, 60, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  border: 1px solid rgba(217, 59, 60, 0.25);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Scroll Reveal Initial & Active States */
+.timeline-item.left .timeline-card {
+  opacity: 0;
+  transform: translateX(-35px);
+}
+
+.timeline-item.right .timeline-card {
+  opacity: 0;
+  transform: translateX(35px);
+}
+
+.timeline-item.is-visible .timeline-card {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item.is-visible .timeline-node {
+  border-color: var(--color-brand-red);
+  box-shadow: 0 0 15px rgba(217, 59, 60, 0.3);
+}
+
+/* Hover Accent Physics */
+.timeline-card:hover {
+  border-color: rgba(217, 59, 60, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Mobile Responsive Layout (<= 900px) */
+@media (max-width: 900px) {
+  .work-process-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .work-process-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .work-process-title {
+    font-size: 1.85rem;
+  }
+
+  .work-process-subtitle {
+    font-size: 0.975rem;
+  }
+
+  .timeline-spine {
+    left: 24px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 64px;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+  }
+
+  .timeline-node {
+    left: 24px;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 1.65rem 1.5rem;
+  }
+
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  .timeline-item.is-visible .timeline-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

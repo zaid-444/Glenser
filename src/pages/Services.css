@@ -1,0 +1,190 @@
+/* Services Page - Dark Luxury Styling (Reference Layout Matched) */
+
+.services-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* 1. Top Services Header Banner (Image + Title ONLY) */
+.services-hero-banner {
+  position: relative;
+  width: 100%;
+  padding: 8rem 2rem 5rem 2rem;
+  background-color: var(--color-bg-primary);
+  background-image: url('../assets/images/common/why-glenser.jpeg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-silver);
+}
+
+.services-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(18, 18, 20, 0.65) 0%,
+    rgba(12, 12, 14, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.services-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-hero-title {
+  font-size: 2.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.services-hero-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-red) 0%, var(--color-accent-silver) 100%);
+  margin: 0.85rem auto 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(217, 59, 60, 0.4);
+}
+
+/* 2. Standalone Introductory Text Section BELOW Image Banner */
+.services-intro-section {
+  width: 100%;
+  padding: 3.5rem 2rem 1.5rem 2rem;
+  background-color: var(--color-bg-primary);
+}
+
+.services-intro-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-intro-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* 3. Services Main Grid Container */
+.services-section-body {
+  width: 100%;
+  padding: 3.5rem 2rem 6rem 2rem;
+  background-color: var(--color-bg-primary);
+}
+
+.services-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem 2.5rem;
+}
+
+/* Service Card Component - Clean Static (No Hover Effects) */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: transparent;
+  border: none;
+}
+
+.service-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a880; /* Warm Gold Matching Reference */
+  margin-bottom: 1.25rem;
+}
+
+.service-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #c5a880; /* Gold Title Matching Reference */
+  margin-bottom: 0.85rem;
+}
+
+.service-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+  .services-hero-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero-banner {
+    padding: 6.5rem 1.25rem 3.5rem 1.25rem;
+  }
+
+  .services-intro-section {
+    padding: 2.5rem 1.25rem 1rem 1.25rem;
+  }
+
+  .services-section-body {
+    padding: 2.5rem 1.25rem 4.5rem 1.25rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .services-intro-paragraph {
+    font-size: 0.975rem;
+  }
+
+  .service-card-title {
+    font-size: 1.15rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.9rem;
+  }
+}

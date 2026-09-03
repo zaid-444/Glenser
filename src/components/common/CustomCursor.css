@@ -11,50 +11,50 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background-color: var(--color-brand-red);
   border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 0 8px rgba(217, 59, 60, 0.8);
+  box-shadow: 0 0 6px rgba(217, 59, 60, 0.8);
 }
 
 .custom-cursor-ring {
   position: fixed;
   top: 0;
   left: 0;
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   border: 1px solid rgba(226, 232, 240, 0.45);
   border-radius: 50%;
   pointer-events: none;
   z-index: 99998;
   transform: translate(-50%, -50%);
-  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              background-color 0.35s ease,
-              border-color 0.35s ease,
-              box-shadow 0.35s ease,
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
               opacity 0.3s ease;
   will-change: transform;
 }
 
 /* Hover State on Interactive Elements (Buttons, Links, Logo, Cards) */
 .custom-cursor-ring.hovered {
-  width: 50px;
-  height: 50px;
+  width: 34px;
+  height: 34px;
   border-color: var(--color-brand-red);
   background-color: rgba(217, 59, 60, 0.08);
-  box-shadow: 0 0 20px rgba(217, 59, 60, 0.35), 0 0 10px rgba(226, 232, 240, 0.2);
+  box-shadow: 0 0 12px rgba(217, 59, 60, 0.35);
 }
 
 .custom-cursor-dot.hovered {
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%) scale(1.2);
   background-color: var(--color-accent-platinum);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
 }
 
 /* Hide on Touch / Mobile Devices */

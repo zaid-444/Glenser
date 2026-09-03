@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/common/logo.png';
 import './Header.css';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -13,32 +16,49 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleProjectsClick = (e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const projectsEl = document.getElementById('projects');
+        if (projectsEl) projectsEl.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const projectsEl = document.getElementById('projects');
+      if (projectsEl) projectsEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="site-header">
       <div className="header-container">
         {/* Left Side: Brand Logo */}
-        <a href="#" className="header-brand" aria-label="Glenser Interior Studio Home">
+        <Link to="/" className="header-brand" aria-label="Glenser Interior Studio Home">
           <img
             src={logo}
             alt="Glenser Interior Studio Logo"
             className="header-logo"
           />
-        </a>
+        </Link>
 
         {/* Center: Navigation Links */}
         <nav className="header-nav" aria-label="Main Navigation">
           <ul className="nav-list">
             <li>
-              <a href="#about" className="nav-link">About Us</a>
+              <Link to="/" className="nav-link">About Us</Link>
             </li>
             <li>
-              <a href="#services" className="nav-link">Our Services</a>
+              <Link to="/services" className="nav-link">Our Services</Link>
             </li>
             <li>
-              <a href="#projects" className="nav-link">Our Projects</a>
+              <a href="#projects" onClick={handleProjectsClick} className="nav-link">
+                Our Projects
+              </a>
             </li>
             <li>
-              <a href="#contact" className="nav-link">Get In Touch</a>
+              <Link to="/contact" className="nav-link">Get In Touch</Link>
             </li>
           </ul>
         </nav>
@@ -101,24 +121,24 @@ export default function Header() {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-list">
           <li>
-            <a href="#about" className="mobile-nav-link" onClick={closeMobileMenu}>
+            <Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#services" className="mobile-nav-link" onClick={closeMobileMenu}>
+            <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>
               Our Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" className="mobile-nav-link" onClick={closeMobileMenu}>
+            <a href="#projects" className="mobile-nav-link" onClick={handleProjectsClick}>
               Our Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="mobile-nav-link" onClick={closeMobileMenu}>
+            <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
               Get In Touch
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="mobile-socials">

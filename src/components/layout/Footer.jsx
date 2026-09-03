@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/common/logo.png';
 import './Footer.css';
 
@@ -7,9 +8,9 @@ export default function Footer() {
       <div className="footer-container">
         {/* Column 1: Brand Info & Social Links */}
         <div className="footer-col-brand">
-          <a href="#" aria-label="Glenser Interior Studio Home">
+          <Link to="/" aria-label="Glenser Interior Studio Home">
             <img src={logo} alt="Glenser Interior Studio" className="footer-logo" />
-          </a>
+          </Link>
           <p className="footer-tagline">
             Bespoke architectural interiors crafted with timeless sophistication, modern functionality, and uncompromising precision.
           </p>
@@ -58,10 +59,10 @@ export default function Footer() {
         <div>
           <h3 className="footer-col-title">QUICK LINKS</h3>
           <ul className="footer-links-list">
-            <li><a href="#about" className="footer-link">About Us</a></li>
-            <li><a href="#services" className="footer-link">Our Services</a></li>
-            <li><a href="#projects" className="footer-link">Our Projects</a></li>
-            <li><a href="#contact" className="footer-link">Contact Studio</a></li>
+            <li><Link to="/" className="footer-link">About Us</Link></li>
+            <li><Link to="/services" className="footer-link">Our Services</Link></li>
+            <li><Link to="/" className="footer-link">Our Projects</Link></li>
+            <li><Link to="/contact" className="footer-link">Contact Studio</Link></li>
           </ul>
         </div>
 

@@ -1,8 +1,12 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import Home from './pages/Home';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 import CustomCursor from './components/common/CustomCursor';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -28,10 +32,15 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToTop />
       <CustomCursor />
-      <Home />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

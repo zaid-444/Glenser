@@ -87,7 +87,7 @@ export default function PortfolioSection() {
   }, [visibleProjects]);
 
   return (
-    <section className="portfolio-section" aria-label="Glenser Interior Studio Portfolio">
+    <section className="portfolio-section" id="projects" aria-label="Glenser Interior Studio Portfolio">
       <div className="portfolio-container">
         <header className="portfolio-header">
           <h2 className="portfolio-title">PORTFOLIO</h2>
