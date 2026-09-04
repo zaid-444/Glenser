@@ -1,11 +1,7 @@
+import { Link } from 'react-router-dom';
 import './CtaSection.css';
 
 export default function CtaSection() {
-  const handleScheduleClick = (e) => {
-    e.preventDefault();
-    // Consultation booking modal / interaction will be hooked as instructed by Lead
-  };
-
   return (
     <section className="cta-section" aria-label="Schedule a Consultation with Glenser Interior Studio">
       <div className="cta-overlay" />
@@ -19,14 +15,9 @@ export default function CtaSection() {
         <div className="cta-brand-name">GLENSER INTERIOR STUDIO</div>
 
         <div className="cta-buttons">
-          <a
-            href="#contact"
-            className="cta-btn-primary"
-            onClick={handleScheduleClick}
-            role="button"
-          >
+          <Link to="/contact" className="cta-btn-primary">
             SCHEDULE A CONSULTATION
-          </a>
+          </Link>
           <a
             href="https://wa.me/919902364086"
             target="_blank"

@@ -7,7 +7,7 @@ export default function StorySection() {
   };
 
   return (
-    <section className="story-section" aria-label="About Glenser Interior Studio">
+    <section className="story-section" id="about" aria-label="About Glenser Interior Studio">
       <div className="story-overlay" />
       <div className="story-container">
         <h2 className="story-title">OUR STORY</h2>

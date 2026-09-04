@@ -16,6 +16,21 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const aboutEl = document.getElementById('about');
+        if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const aboutEl = document.getElementById('about');
+      if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleProjectsClick = (e) => {
     e.preventDefault();
     closeMobileMenu();
@@ -47,7 +62,9 @@ export default function Header() {
         <nav className="header-nav" aria-label="Main Navigation">
           <ul className="nav-list">
             <li>
-              <Link to="/" className="nav-link">About Us</Link>
+              <a href="#about" onClick={handleAboutClick} className="nav-link">
+                About Us
+              </a>
             </li>
             <li>
               <Link to="/services" className="nav-link">Our Services</Link>
@@ -121,9 +138,9 @@ export default function Header() {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-list">
           <li>
-            <Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>
+            <a href="#about" className="mobile-nav-link" onClick={handleAboutClick}>
               About Us
-            </Link>
+            </a>
           </li>
           <li>
             <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>
