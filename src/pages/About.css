@@ -1,0 +1,456 @@
+/* ==========================================================================
+   ABOUT PAGE STYLING - GLENSER INTERIOR STUDIO
+   ========================================================================== */
+
+.about-page {
+  background-color: #141416;
+  color: #f9f9fb;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Reveal Scroll Animations --- */
+.about-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   1. ABOUT HERO BANNER
+   ========================================================================== */
+.about-hero-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 360px;
+  background-image: url('../assets/images/common/story-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0; /* Starts directly after header */
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 22, 0.75) 0%,
+    rgba(20, 20, 22, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #cbd5e1;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   2. GLENSER INTRODUCTION SECTION
+   ========================================================================== */
+.about-intro-section {
+  padding: 90px 24px 70px;
+  text-align: center;
+  background-color: #141416;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-intro-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-intro-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.about-intro-text {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.8;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   3. FOUNDER'S NOTE SECTION
+   ========================================================================== */
+.about-founders-section {
+  padding: 90px 0 110px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #141416;
+}
+
+.founder-row-1 {
+  margin-bottom: 90px;
+}
+
+.founder-row-2 {
+  margin-bottom: 20px;
+}
+
+.founder-name {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+
+.founder-role {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #d93b3c;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Image Container Placeholder - Left Flush */
+.about-img-frame-wrapper.left-flush {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 480px;
+  border-radius: 0 90px 90px 0;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Container Placeholder - Right Flush (Design Approach) */
+.about-img-frame-wrapper.right-flush {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 480px;
+  border-radius: 90px 0 0 90px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(217, 59, 60, 0.08) 0%, transparent 70%);
+}
+
+.placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #64748b;
+  text-align: center;
+  padding: 24px;
+}
+
+.placeholder-icon {
+  width: 48px;
+  height: 48px;
+  fill: #d93b3c;
+  opacity: 0.6;
+}
+
+.placeholder-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* Content Styling */
+.about-split-content.right-padded {
+  padding-right: clamp(24px, 5vw, 90px);
+  padding-left: 20px;
+}
+
+.about-split-content.left-padded {
+  padding-left: clamp(24px, 5vw, 90px);
+  padding-right: 20px;
+}
+
+.about-section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #d93b3c;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-split-heading {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.about-split-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 18px;
+}
+
+.about-split-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. OUR CORE PRINCIPLES SECTION
+   ========================================================================== */
+.about-principles-section {
+  padding: 100px 0;
+  background-color: #141416;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.principle-card {
+  background: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 28px;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.principle-card:hover {
+  transform: scale(1.04);
+  border-color: rgba(217, 59, 60, 0.4);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.principle-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 24px;
+  background: rgba(217, 59, 60, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principle-icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+  fill: #d93b3c;
+}
+
+.principle-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.principle-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   6. FINAL CTA SECTION
+   ========================================================================== */
+.about-cta-section {
+  padding: 110px 24px;
+  background: linear-gradient(180deg, #141416 0%, #0d0d0f 100%);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.about-cta-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about-cta-subtext {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.about-cta-button {
+  display: inline-block;
+  padding: 16px 42px;
+  background-color: #d93b3c;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(217, 59, 60, 0.3);
+}
+
+.about-cta-button:hover {
+  background-color: #b82c2d;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(217, 59, 60, 0.45);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .about-hero-banner {
+    height: 42vh;
+    min-height: 320px;
+  }
+
+  .about-split-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-img-frame-wrapper.left-flush {
+    aspect-ratio: 16 / 10;
+    max-height: 320px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .about-img-frame-wrapper.right-flush {
+    aspect-ratio: 16 / 10;
+    max-height: 320px;
+    border-radius: 50px 0 0 50px;
+  }
+
+  .about-split-content.right-padded,
+  .about-split-content.left-padded {
+    padding: 0 24px;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-intro-section {
+    padding: 60px 20px 50px;
+  }
+
+  .about-founders-section,
+  .about-principles-section {
+    padding: 60px 0;
+  }
+
+  .founder-row-1 {
+    margin-bottom: 50px;
+  }
+
+  .about-cta-section {
+    padding: 80px 20px;
+  }
+}

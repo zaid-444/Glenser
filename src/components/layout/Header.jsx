@@ -62,17 +62,20 @@ export default function Header() {
         <nav className="header-nav" aria-label="Main Navigation">
           <ul className="nav-list">
             <li>
-              <a href="#about" onClick={handleAboutClick} className="nav-link">
+              <Link to="/about" className="nav-link">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <Link to="/services" className="nav-link">Our Services</Link>
+              <Link to="/services" className="nav-link">Services</Link>
             </li>
             <li>
               <a href="#projects" onClick={handleProjectsClick} className="nav-link">
                 Our Projects
               </a>
+            </li>
+            <li>
+              <Link to="/room-types" className="nav-link">Room Types</Link>
             </li>
             <li>
               <Link to="/contact" className="nav-link">Get In Touch</Link>
@@ -138,19 +141,24 @@ export default function Header() {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-list">
           <li>
-            <a href="#about" className="mobile-nav-link" onClick={handleAboutClick}>
+            <Link to="/about" className="mobile-nav-link" onClick={closeMobileMenu}>
               About Us
-            </a>
+            </Link>
           </li>
           <li>
             <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>
-              Our Services
+              Services
             </Link>
           </li>
           <li>
             <a href="#projects" className="mobile-nav-link" onClick={handleProjectsClick}>
               Our Projects
             </a>
+          </li>
+          <li>
+            <Link to="/room-types" className="mobile-nav-link" onClick={closeMobileMenu}>
+              Room Types
+            </Link>
           </li>
           <li>
             <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>

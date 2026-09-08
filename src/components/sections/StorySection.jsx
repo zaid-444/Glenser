@@ -1,11 +1,7 @@
+import { Link } from 'react-router-dom';
 import './StorySection.css';
 
 export default function StorySection() {
-  const handleReadMoreClick = (e) => {
-    e.preventDefault();
-    // Static button as per Lead instruction (non-working link / no redirect)
-  };
-
   return (
     <section className="story-section" id="about" aria-label="About Glenser Interior Studio">
       <div className="story-overlay" />
@@ -17,15 +13,13 @@ export default function StorySection() {
           interior designers works closely with you to transform your vision into living art, ensuring 
           every detail reflects luxury, comfort, and distinction.
         </p>
-        <a
-          href="#"
+        <Link
+          to="/about"
           className="story-btn"
-          onClick={handleReadMoreClick}
-          role="button"
           aria-label="Read More About Our Story"
         >
           READ MORE
-        </a>
+        </Link>
       </div>
     </section>
   );

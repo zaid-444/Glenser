@@ -90,9 +90,10 @@ export default function Footer() {
         <div>
           <h3 className="footer-col-title">QUICK LINKS</h3>
           <ul className="footer-links-list">
-            <li><a href="#about" onClick={handleAboutClick} className="footer-link">About Us</a></li>
-            <li><Link to="/services" className="footer-link">Our Services</Link></li>
+            <li><Link to="/about" className="footer-link">About Us</Link></li>
+            <li><Link to="/services" className="footer-link">Services</Link></li>
             <li><a href="#projects" onClick={handleProjectsClick} className="footer-link">Our Projects</a></li>
+            <li><Link to="/room-types" className="footer-link">Room Types</Link></li>
             <li><Link to="/contact" className="footer-link">Contact Studio</Link></li>
           </ul>
         </div>

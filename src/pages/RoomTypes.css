@@ -1,0 +1,358 @@
+/* ==========================================================================
+   ROOM TYPES PAGE STYLING - GLENSER INTERIOR STUDIO
+   ========================================================================== */
+
+.room-types-page {
+  background-color: #141416;
+  color: #f9f9fb;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   1. HERO / BANNER SECTION
+   ========================================================================== */
+.room-types-hero {
+  position: relative;
+  width: 100%;
+  height: 48vh;
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0; /* Starts directly after header */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.room-types-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 20, 22, 0.65) 0%,
+    rgba(12, 12, 14, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+.room-types-hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+.room-types-hero-title {
+  font-size: clamp(1.6rem, 3.8vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. ROOM TYPE SELECTOR AREA
+   ========================================================================== */
+.room-types-selector-section {
+  padding: 40px 24px 60px;
+  background-color: #18181c;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.room-types-selector-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.room-type-selector-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  padding: 14px 44px 14px 28px;
+  background-color: #0b0b0d;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.room-type-selector-btn:hover,
+.room-type-selector-btn.active {
+  background-color: #121216;
+  border-color: rgba(217, 59, 60, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.selector-label {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+.selector-chevron {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: #c5a059;
+  transition: transform 0.3s ease;
+}
+
+.selector-chevron.open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Dropdown Menu Overlay */
+.selector-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  max-height: 260px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background-color: #0d0d10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 8px 0;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  animation: dropdownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Scrollbar for Dropdown Menu */
+.selector-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selector-dropdown-menu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+
+.selector-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(217, 59, 60, 0.5);
+  border-radius: 10px;
+}
+
+.selector-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 59, 60, 0.8);
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.dropdown-option-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-option-btn:hover {
+  background-color: rgba(217, 59, 60, 0.15);
+  color: #ffffff;
+}
+
+.dropdown-option-btn.active {
+  background-color: rgba(217, 59, 60, 0.25);
+  color: #d93b3c;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   3. ASYMMETRIC MASONRY GALLERY GRID
+   ========================================================================== */
+.room-types-gallery-section {
+  padding: 60px 24px 100px;
+  background-color: #141416;
+}
+
+.room-types-gallery-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.asymmetric-gallery-grid {
+  column-count: 3;
+  column-gap: 20px;
+  width: 100%;
+  animation: galleryFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes galleryFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-tile {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* Aspect ratio variations matching reference screenshot natural image flow */
+.gallery-tile.tile-portrait .placeholder-frame {
+  aspect-ratio: 9 / 16;
+}
+
+.gallery-tile.tile-tall .placeholder-frame {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-tile.tile-square .placeholder-frame {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-tile.tile-wide .placeholder-frame {
+  aspect-ratio: 16 / 10;
+}
+
+.tile-image-frame.placeholder-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.tile-image-frame.placeholder-frame:hover {
+  border-color: rgba(217, 59, 60, 0.4);
+  background: linear-gradient(135deg, rgba(217, 59, 60, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  transform: translateY(-3px);
+}
+
+.placeholder-inner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+.placeholder-icon-svg {
+  width: 44px;
+  height: 44px;
+  fill: #d93b3c;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tile-image-frame.placeholder-frame:hover .placeholder-icon-svg {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.placeholder-text-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.tile-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .asymmetric-gallery-grid {
+    column-count: 2;
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-types-hero {
+    height: 38vh;
+    min-height: 280px;
+  }
+
+  .room-types-hero-title {
+    font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+    letter-spacing: 0.05em;
+  }
+
+  .room-types-selector-section {
+    padding: 30px 20px 45px;
+  }
+
+  .room-type-selector-btn {
+    min-width: 200px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .room-types-gallery-section {
+    padding: 40px 16px 70px;
+  }
+
+  .asymmetric-gallery-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
