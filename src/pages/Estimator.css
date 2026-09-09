@@ -963,29 +963,48 @@
 .estimator-sidebar-column {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
 }
 
 .live-estimate-card {
-  position: sticky;
-  top: 80px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto !important;
   background-color: #141417;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 22px 24px;
+  padding: 18px 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  scrollbar-width: thin;
+  scrollbar-color: #d93b3c #1b1b1f;
+}
+
+.live-estimate-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.live-estimate-card::-webkit-scrollbar-track {
+  background: #1b1b1f;
+  border-radius: 4px;
+}
+
+.live-estimate-card::-webkit-scrollbar-thumb {
+  background: #d93b3c;
+  border-radius: 4px;
 }
 
 .estimate-card-title {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
 }
 
 .estimate-card-divider {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.08);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .estimate-empty-state {
@@ -993,14 +1012,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 36px 12px;
+  padding: 30px 12px;
 }
 
 .estimate-ruler-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   color: #64748b;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   opacity: 0.6;
 }
 
@@ -1015,19 +1034,19 @@
 .estimate-filled-content {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .estimate-main-header-box {
   background-color: #1b1b1f;
   border: 1px solid rgba(245, 158, 11, 0.25);
-  border-radius: 12px;
-  padding: 18px 16px;
+  border-radius: 10px;
+  padding: 14px 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .estimate-pkg-bhk-tag {
@@ -1039,15 +1058,16 @@
 }
 
 .estimate-main-price-range {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: #ffffff;
-  margin: 4px 0 0 0;
+  margin: 2px 0 0 0;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .excl-gst-subtext {
-  font-size: 0.75rem;
+  font-size: 0.73rem;
   color: #94a3b8;
 }
 
@@ -1055,9 +1075,9 @@
 .estimate-items-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  max-height: 360px;
-  overflow-y: auto;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto !important;
   padding-right: 4px;
   scrollbar-width: thin;
   scrollbar-color: #d93b3c transparent;
@@ -1076,9 +1096,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 5px 0;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 .item-row-left {
@@ -1089,7 +1109,7 @@
 }
 
 .item-row-icon {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .item-row-name {
@@ -1097,7 +1117,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 170px;
+  max-width: 160px;
 }
 
 .item-row-price {
@@ -1110,9 +1130,9 @@
 .estimate-totals-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 6px;
-  padding-top: 14px;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1123,19 +1143,20 @@
   background-color: #1b1b1f;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  padding: 12px 14px;
+  padding: 10px 12px;
 }
 
 .summary-label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #cbd5e1;
   font-weight: 500;
 }
 
 .summary-price {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .gst-row {
@@ -1143,13 +1164,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 4px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: #94a3b8;
 }
 
 .gst-price {
   font-weight: 600;
   color: #cbd5e1;
+  white-space: nowrap;
 }
 
 .grand-total-box {
@@ -1159,20 +1181,23 @@
   background: linear-gradient(135deg, rgba(217, 59, 60, 0.12), rgba(245, 158, 11, 0.08));
   border: 1px solid rgba(245, 158, 11, 0.4);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 11px 13px;
+  gap: 8px;
 }
 
 .grand-total-label {
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: #f59e0b;
+  white-space: nowrap;
 }
 
 .grand-total-price {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 800;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 /* Call to action */

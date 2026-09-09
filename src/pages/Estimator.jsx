@@ -23,6 +23,7 @@ function CustomDropdown({ value, options, placeholder, onChange }) {
       {isOpen && (
         <div
           className="custom-dropdown-menu"
+          data-lenis-prevent
           onWheel={(e) => e.stopPropagation()}
         >
           {placeholder && (
@@ -888,7 +889,7 @@ export default function Estimator() {
 
           {/* RIGHT COLUMN: YOUR LIVE ESTIMATE SIDEBAR */}
           <aside className="estimator-sidebar-column">
-            <div className="live-estimate-card">
+            <div className="live-estimate-card" data-lenis-prevent>
               <h3 className="estimate-card-title">Your Live Estimate</h3>
               <div className="estimate-card-divider" />
 
@@ -918,7 +919,7 @@ export default function Estimator() {
                   </div>
 
                   {/* Itemized Breakdown List */}
-                  <div className="estimate-items-list">
+                  <div className="estimate-items-list" data-lenis-prevent>
                     {/* Selected Rooms */}
                     {roomItems.map((item) => (
                       <div key={item.id} className="estimate-item-row">
