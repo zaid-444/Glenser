@@ -4,97 +4,14 @@ import Footer from '../components/layout/Footer';
 import heroImg from '../assets/images/projects/img4.jpeg';
 import './RoomTypes.css';
 
-const roomTypeOptions = [
-  'Bed Rooms',
-  'Dining Room',
-  'Kids Room',
-  'Kitchen',
-  'Living Room',
-  'Mandir',
-  'Study Room',
-  'Toilet',
-  'Wardrobe',
-];
+import roomTypesData from '../data/roomTypesData.json';
 
-const categoryPlaceholderData = {
-  'Bed Rooms': [
-    { id: 1, label: 'BEDROOM PHOTO 01 (TALL PORTRAIT)', type: 'tall' },
-    { id: 2, label: 'BEDROOM PHOTO 02 (SQUARE)', type: 'square' },
-    { id: 3, label: 'BEDROOM PHOTO 03 (EXTRA TALL)', type: 'portrait' },
-    { id: 4, label: 'BEDROOM PHOTO 04 (LANDSCAPE)', type: 'wide' },
-    { id: 5, label: 'BEDROOM PHOTO 05 (MEDIUM TALL)', type: 'tall' },
-    { id: 6, label: 'BEDROOM PHOTO 06 (SQUARE)', type: 'square' },
-  ],
-  'Dining Room': [
-    { id: 1, label: 'DINING PHOTO 01 (LANDSCAPE)', type: 'wide' },
-    { id: 2, label: 'DINING PHOTO 02 (TALL PORTRAIT)', type: 'tall' },
-    { id: 3, label: 'DINING PHOTO 03 (SQUARE)', type: 'square' },
-    { id: 4, label: 'DINING PHOTO 04 (EXTRA TALL)', type: 'portrait' },
-    { id: 5, label: 'DINING PHOTO 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'DINING PHOTO 06 (TALL PORTRAIT)', type: 'tall' },
-  ],
-  'Kids Room': [
-    { id: 1, label: 'KIDS ROOM 01 (TALL PORTRAIT)', type: 'tall' },
-    { id: 2, label: 'KIDS ROOM 02 (LANDSCAPE)', type: 'wide' },
-    { id: 3, label: 'KIDS ROOM 03 (SQUARE)', type: 'square' },
-    { id: 4, label: 'KIDS ROOM 04 (EXTRA TALL)', type: 'portrait' },
-    { id: 5, label: 'KIDS ROOM 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'KIDS ROOM 06 (TALL PORTRAIT)', type: 'tall' },
-  ],
-  'Kitchen': [
-    { id: 1, label: 'KITCHEN 01 (LANDSCAPE)', type: 'wide' },
-    { id: 2, label: 'KITCHEN 02 (TALL PORTRAIT)', type: 'tall' },
-    { id: 3, label: 'KITCHEN 03 (EXTRA TALL)', type: 'portrait' },
-    { id: 4, label: 'KITCHEN 04 (SQUARE)', type: 'square' },
-    { id: 5, label: 'KITCHEN 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'KITCHEN 06 (TALL PORTRAIT)', type: 'tall' },
-  ],
-  'Living Room': [
-    { id: 1, label: 'LIVING ROOM 01 (EXTRA TALL)', type: 'portrait' },
-    { id: 2, label: 'LIVING ROOM 02 (LANDSCAPE)', type: 'wide' },
-    { id: 3, label: 'LIVING ROOM 03 (SQUARE)', type: 'square' },
-    { id: 4, label: 'LIVING ROOM 04 (TALL PORTRAIT)', type: 'tall' },
-    { id: 5, label: 'LIVING ROOM 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'LIVING ROOM 06 (SQUARE)', type: 'square' },
-  ],
-  'Mandir': [
-    { id: 1, label: 'MANDIR 01 (TALL PORTRAIT)', type: 'portrait' },
-    { id: 2, label: 'MANDIR 02 (SQUARE)', type: 'square' },
-    { id: 3, label: 'MANDIR 03 (LANDSCAPE)', type: 'wide' },
-    { id: 4, label: 'MANDIR 04 (TALL PORTRAIT)', type: 'tall' },
-    { id: 5, label: 'MANDIR 05 (SQUARE)', type: 'square' },
-    { id: 6, label: 'MANDIR 06 (LANDSCAPE)', type: 'wide' },
-  ],
-  'Study Room': [
-    { id: 1, label: 'STUDY ROOM 01 (TALL PORTRAIT)', type: 'tall' },
-    { id: 2, label: 'STUDY ROOM 02 (LANDSCAPE)', type: 'wide' },
-    { id: 3, label: 'STUDY ROOM 03 (SQUARE)', type: 'square' },
-    { id: 4, label: 'STUDY ROOM 04 (EXTRA TALL)', type: 'portrait' },
-    { id: 5, label: 'STUDY ROOM 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'STUDY ROOM 06 (TALL PORTRAIT)', type: 'tall' },
-  ],
-  'Toilet': [
-    { id: 1, label: 'TOILET 01 (TALL PORTRAIT)', type: 'portrait' },
-    { id: 2, label: 'TOILET 02 (LANDSCAPE)', type: 'wide' },
-    { id: 3, label: 'TOILET 03 (SQUARE)', type: 'square' },
-    { id: 4, label: 'TOILET 04 (TALL PORTRAIT)', type: 'tall' },
-    { id: 5, label: 'TOILET 05 (LANDSCAPE)', type: 'wide' },
-    { id: 6, label: 'TOILET 06 (SQUARE)', type: 'square' },
-  ],
-  'Wardrobe': [
-    { id: 1, label: 'WARDROBE 01 (EXTRA TALL)', type: 'portrait' },
-    { id: 2, label: 'WARDROBE 02 (TALL PORTRAIT)', type: 'tall' },
-    { id: 3, label: 'WARDROBE 03 (LANDSCAPE)', type: 'wide' },
-    { id: 4, label: 'WARDROBE 04 (SQUARE)', type: 'square' },
-    { id: 5, label: 'WARDROBE 05 (TALL PORTRAIT)', type: 'tall' },
-    { id: 6, label: 'WARDROBE 06 (LANDSCAPE)', type: 'wide' },
-  ],
-};
+const { roomTypeOptions, categories: categoryGalleryData } = roomTypesData;
 
 export default function RoomTypes() {
-  const [selectedRoom, setSelectedRoom] = useState('Study Room');
+  const [selectedRoom, setSelectedRoom] = useState('Bed Rooms');
   const [isOpen, setIsOpen] = useState(false);
-  const [activeKey, setActiveKey] = useState('Study Room');
+  const [activeKey, setActiveKey] = useState('Bed Rooms');
   const selectorRef = useRef(null);
 
   const toggleDropdown = () => {
@@ -121,7 +38,7 @@ export default function RoomTypes() {
     };
   }, []);
 
-  const currentPlaceholders = categoryPlaceholderData[selectedRoom] || categoryPlaceholderData['Study Room'];
+  const currentGalleryItems = categoryGalleryData[selectedRoom] || categoryGalleryData['Bed Rooms'];
 
   return (
     <div className="room-types-page">
@@ -179,23 +96,35 @@ export default function RoomTypes() {
           </div>
         </section>
 
-        {/* 3. ASYMMETRIC MASONRY PLACEHOLDER GALLERY GRID */}
+        {/* 3. MASONRY GALLERY GRID */}
         <section className="room-types-gallery-section" aria-label={`${selectedRoom} Gallery`}>
           <div className="room-types-gallery-container">
             <div key={activeKey} className="asymmetric-gallery-grid">
-              {currentPlaceholders.map((item) => (
+              {currentGalleryItems.map((item) => (
                 <div 
                   key={item.id} 
-                  className={`gallery-tile tile-${item.type}`}
+                  className={`gallery-tile ${item.type ? `tile-${item.type}` : ''}`}
                 >
-                  <div className="tile-image-frame placeholder-frame">
-                    <div className="placeholder-inner-content">
-                      <svg viewBox="0 0 24 24" className="placeholder-icon-svg" aria-hidden="true">
-                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
-                      </svg>
-                      <span className="placeholder-text-label">{item.label}</span>
+                  {item.src ? (
+                    <div className="tile-image-frame real-image-frame">
+                      <img 
+                        src={item.src} 
+                        alt={item.alt || selectedRoom} 
+                        className="gallery-tile-img" 
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="tile-image-frame placeholder-frame">
+                      <div className="placeholder-inner-content">
+                        <svg viewBox="0 0 24 24" className="placeholder-icon-svg" aria-hidden="true">
+                          <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                        </svg>
+                        <span className="placeholder-text-label">{item.label}</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

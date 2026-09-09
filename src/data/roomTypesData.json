@@ -1,0 +1,80 @@
+{
+  "roomTypeOptions": [
+    "Bed Rooms",
+    "Dining Room",
+    "Kids Room",
+    "Kitchen",
+    "Living Room",
+    "Mandir",
+    "Study Room",
+    "Toilet",
+    "Wardrobe"
+  ],
+  "categories": {
+    "Bed Rooms": [
+      { "id": 1, "src": "/room-types/bedrooms/bed1.jpeg", "alt": "Bed Room Design 01" },
+      { "id": 2, "src": "/room-types/bedrooms/bed2.jpeg", "alt": "Bed Room Design 02" },
+      { "id": 3, "src": "/room-types/bedrooms/bed3.jpeg", "alt": "Bed Room Design 03" },
+      { "id": 4, "src": "/room-types/bedrooms/bed4.jpeg", "alt": "Bed Room Design 04" },
+      { "id": 5, "src": "/room-types/bedrooms/bed5.jpeg", "alt": "Bed Room Design 05" },
+      { "id": 6, "src": "/room-types/bedrooms/bed6.jpeg", "alt": "Bed Room Design 06" }
+    ],
+    "Dining Room": [
+      { "id": 1, "src": "/room-types/dining/d1.jpeg", "alt": "Dining Room Design 01" },
+      { "id": 2, "src": "/room-types/dining/d2.jpeg", "alt": "Dining Room Design 02" },
+      { "id": 3, "src": "/room-types/dining/d3.jpeg", "alt": "Dining Room Design 03" },
+      { "id": 4, "src": "/room-types/dining/d4.jpeg", "alt": "Dining Room Design 04" },
+      { "id": 5, "src": "/room-types/dining/d5.jpeg", "alt": "Dining Room Design 05" },
+      { "id": 6, "src": "/room-types/dining/d6.jpeg", "alt": "Dining Room Design 06" }
+    ],
+    "Kids Room": [
+      { "id": 1, "src": "/room-types/kids/kid1.jpeg", "alt": "Kids Room Design 01" },
+      { "id": 2, "src": "/room-types/kids/kid2.jpeg", "alt": "Kids Room Design 02" },
+      { "id": 3, "src": "/room-types/kids/kid3.jpeg", "alt": "Kids Room Design 03" },
+      { "id": 4, "src": "/room-types/kids/kid4.jpeg", "alt": "Kids Room Design 04" },
+      { "id": 5, "src": "/room-types/kids/kid5.jpeg", "alt": "Kids Room Design 05" },
+      { "id": 6, "src": "/room-types/kids/kid6.jpeg", "alt": "Kids Room Design 06" }
+    ],
+    "Kitchen": [
+      { "id": 1, "src": "/room-types/kitchen/k1.jpeg", "alt": "Kitchen Design 01" },
+      { "id": 2, "src": "/room-types/kitchen/k2.jpeg", "alt": "Kitchen Design 02" },
+      { "id": 3, "src": "/room-types/kitchen/k3.jpeg", "alt": "Kitchen Design 03" },
+      { "id": 4, "src": "/room-types/kitchen/k4.jpeg", "alt": "Kitchen Design 04" },
+      { "id": 5, "src": "/room-types/kitchen/k5.jpeg", "alt": "Kitchen Design 05" },
+      { "id": 6, "src": "/room-types/kitchen/k6.jpeg", "alt": "Kitchen Design 06" }
+    ],
+    "Living Room": [
+      { "id": 1, "src": "/room-types/living/l1.jpeg", "alt": "Living Room Design 01" },
+      { "id": 2, "src": "/room-types/living/l2.jpeg", "alt": "Living Room Design 02" },
+      { "id": 3, "src": "/room-types/living/l3.jpeg", "alt": "Living Room Design 03" },
+      { "id": 4, "src": "/room-types/living/l4.jpeg", "alt": "Living Room Design 04" },
+      { "id": 5, "src": "/room-types/living/l5.jpeg", "alt": "Living Room Design 05" },
+      { "id": 6, "src": "/room-types/living/l6.jpeg", "alt": "Living Room Design 06" }
+    ],
+    "Mandir": [
+      { "id": 1, "src": "/room-types/mandir/m1.jpeg", "alt": "Mandir Design 01" },
+      { "id": 2, "src": "/room-types/mandir/m2.jpeg", "alt": "Mandir Design 02" },
+      { "id": 3, "src": "/room-types/mandir/m3.jpeg", "alt": "Mandir Design 03" },
+      { "id": 4, "src": "/room-types/mandir/m4.jpeg", "alt": "Mandir Design 04" },
+      { "id": 5, "src": "/room-types/mandir/m5.jpeg", "alt": "Mandir Design 05" },
+      { "id": 6, "src": "/room-types/mandir/m6.jpeg", "alt": "Mandir Design 06" }
+    ],
+    "Study Room": [
+      { "id": 1, "src": "/room-types/study/s1.jpeg", "alt": "Study Room Design 01" },
+      { "id": 2, "src": "/room-types/study/s2.jpeg", "alt": "Study Room Design 02" },
+      { "id": 3, "src": "/room-types/study/s3.jpeg", "alt": "Study Room Design 03" },
+      { "id": 4, "src": "/room-types/study/s4.jpeg", "alt": "Study Room Design 04" }
+    ],
+    "Toilet": [
+      { "id": 1, "src": "/room-types/toilet/t1.jpeg", "alt": "Toilet Design 01" },
+      { "id": 2, "src": "/room-types/toilet/t2.jpeg", "alt": "Toilet Design 02" },
+      { "id": 3, "src": "/room-types/toilet/t3.jpeg", "alt": "Toilet Design 03" },
+      { "id": 4, "src": "/room-types/toilet/t4.jpeg", "alt": "Toilet Design 04" },
+      { "id": 5, "src": "/room-types/toilet/t5.jpeg", "alt": "Toilet Design 05" }
+    ],
+    "Wardrobe": [
+      { "id": 1, "src": "/room-types/wardrobe/w1.jpeg", "alt": "Wardrobe Design 01" },
+      { "id": 2, "src": "/room-types/wardrobe/w2.jpeg", "alt": "Wardrobe Design 02" }
+    ]
+  }
+}
