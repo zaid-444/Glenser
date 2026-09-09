@@ -6,20 +6,6 @@ export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleAboutClick = (e) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const aboutEl = document.getElementById('about');
-        if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const aboutEl = document.getElementById('about');
-      if (aboutEl) aboutEl.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleProjectsClick = (e) => {
     e.preventDefault();
     if (location.pathname !== '/') {
@@ -95,6 +81,7 @@ export default function Footer() {
             <li><a href="#projects" onClick={handleProjectsClick} className="footer-link">Our Projects</a></li>
             <li><Link to="/room-types" className="footer-link">Room Types</Link></li>
             <li><Link to="/contact" className="footer-link">Contact Studio</Link></li>
+            <li><Link to="/estimator" className="footer-link">Estimator</Link></li>
           </ul>
         </div>
 

@@ -7,6 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import RoomTypes from './pages/RoomTypes';
 import Contact from './pages/Contact';
+import Estimator from './pages/Estimator';
 import CustomCursor from './components/common/CustomCursor';
 import ScrollToTop from './components/common/ScrollToTop';
 
@@ -43,6 +44,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/room-types" element={<RoomTypes />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/estimator" element={<Estimator />} />
       </Routes>
     </BrowserRouter>
   );

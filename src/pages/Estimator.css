@@ -1,0 +1,1552 @@
+/* ==========================================================================
+   GLENSER ESTIMATOR PAGE STYLING - PREMIUM LUXURY STUDIO THEME
+   ========================================================================== */
+
+.estimator-page {
+  background-color: #08080a;
+  color: #f9f9fb;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. TOP PROGRESS BAR (STICKY WITH GAP) */
+.estimator-progress-bar {
+  width: 100%;
+  background-color: #060608;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.progress-steps-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+}
+
+.progress-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-circle-indicator {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid #d93b3c;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.step-circle-indicator.completed {
+  background-color: #d93b3c;
+  border-color: #d93b3c;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(217, 59, 60, 0.4);
+}
+
+.step-check-svg {
+  width: 10px;
+  height: 10px;
+  stroke: #ffffff;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: color 0.25s ease;
+}
+
+.progress-step-item.completed .step-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.step-connector-line {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(226, 232, 240, 0.25);
+  transition: background-color 0.25s ease;
+}
+
+.step-connector-line.completed {
+  background-color: #d93b3c;
+}
+
+/* 2. MAIN LAYOUT CONTAINER (SLIM LATERAL GAPS) */
+.estimator-main-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. TOP ENCLOSED SECTION CARD (FULL WIDTH - ZERO LATERAL GAP) */
+.estimator-top-section-card {
+  width: 100%;
+  background-color: #141417;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Navigation Row */
+.estimator-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background-color: #141417;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.back-website-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(217, 59, 60, 0.4);
+  color: #f04849;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: rgba(217, 59, 60, 0.05);
+  transition: all 0.25s ease;
+}
+
+.back-website-btn:hover {
+  background: rgba(217, 59, 60, 0.16);
+  border-color: #d93b3c;
+  color: #ffffff;
+}
+
+.estimator-brand-name {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+/* Disclaimer Strip inside Top Section Card */
+.estimator-disclaimer-strip {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.disclaimer-warning-icon {
+  width: 16px;
+  height: 16px;
+  fill: #d93b3c;
+  flex-shrink: 0;
+}
+
+.disclaimer-text {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin: 0;
+  text-align: center;
+}
+
+.disclaimer-text strong {
+  color: #f04849;
+}
+
+.disclaimer-phone {
+  color: #d93b3c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.disclaimer-phone:hover {
+  color: #ffffff;
+}
+
+/* Hero Intro Block inside Top Section Card */
+.estimator-hero-section {
+  padding: 28px 24px 34px;
+  background-color: #141417;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.estimator-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.estimator-subheading-brand {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: #d93b3c;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.estimator-main-title {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.estimator-large-headline {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.highlight-brand {
+  color: #d93b3c;
+  font-weight: 600;
+}
+
+.estimator-subtitle {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0 auto;
+  max-width: 660px;
+}
+
+/* 4. SPLIT CONTENT LAYOUT (STEPS LEFT + SIDEBAR RIGHT) */
+.estimator-content-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  padding: 0 0 60px;
+  width: 100%;
+}
+
+.estimator-steps-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* INDIVIDUAL STEP SECTION CARDS (EACH IN SEPARATE ENCLOSED CARD) */
+.estimator-card-section {
+  background-color: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.section-header {
+  margin-bottom: 22px;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.01em;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* 2x2 PACKAGE CARDS GRID */
+.package-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.package-card {
+  position: relative;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  user-select: none;
+}
+
+.package-card:hover {
+  border-color: rgba(217, 59, 60, 0.45);
+  background-color: #202026;
+  transform: translateY(-2px);
+}
+
+.package-card.selected {
+  border: 1.5px solid #d93b3c;
+  background-color: rgba(217, 59, 60, 0.06);
+  box-shadow: 0 4px 20px rgba(217, 59, 60, 0.15);
+}
+
+.package-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.package-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-transform: uppercase;
+}
+
+.package-card.selected .package-badge {
+  background: rgba(217, 59, 60, 0.18);
+  color: #f87171;
+  border-color: rgba(217, 59, 60, 0.4);
+}
+
+.package-check-icon {
+  width: 20px;
+  height: 20px;
+  color: #d93b3c;
+}
+
+.package-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.package-price {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f59e0b;
+  margin: 0;
+}
+
+.rupee-watermark {
+  position: absolute;
+  right: 14px;
+  bottom: -12px;
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.package-card.selected .rupee-watermark {
+  color: rgba(217, 59, 60, 0.07);
+}
+
+/* RATES NOTE BOX (COMPACT 1-LINE FORMAT WITH HEAVY LEFT BORDER) */
+.rates-note-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 2px solid #d93b3c;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.rates-note-icon {
+  width: 16px;
+  height: 16px;
+  color: #d93b3c;
+  flex-shrink: 0;
+}
+
+.note-text {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.note-text strong {
+  color: #e2e8f0;
+}
+
+/* STEP 2: PROPERTY DETAILS FORM STYLING */
+.property-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  text-transform: uppercase;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-select {
+  width: 100%;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px 38px 12px 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #ffffff;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-select:hover,
+.form-select:focus {
+  border-color: rgba(217, 59, 60, 0.5);
+  background-color: #202026;
+  outline: none;
+}
+
+.form-select option {
+  background-color: #1b1b1f;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.location-selects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CUSTOM SCROLLABLE DROPDOWN (RESTRICTED HEIGHT ~5-6 ITEMS) */
+.custom-dropdown-container {
+  position: relative;
+  width: 100%;
+  outline: none;
+}
+
+.custom-dropdown-trigger {
+  width: 100%;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.custom-dropdown-trigger:hover,
+.custom-dropdown-container:focus .custom-dropdown-trigger {
+  border-color: rgba(217, 59, 60, 0.5);
+  background-color: #202026;
+}
+
+.custom-dropdown-trigger .select-arrow {
+  position: static;
+  transform: none;
+  font-size: 0.6rem;
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.custom-dropdown-trigger .select-arrow.open {
+  transform: rotate(180deg);
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  max-height: 190px;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+  scrollbar-width: thin;
+  scrollbar-color: #d93b3c #26262b;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #d93b3c;
+  border-radius: 4px;
+}
+
+.custom-dropdown-option {
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.custom-dropdown-option:hover {
+  background-color: #2a2a34;
+  color: #ffffff;
+}
+
+.custom-dropdown-option.selected {
+  background-color: rgba(217, 59, 60, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* CARPET AREA CARD BOX */
+.carpet-area-card-box {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carpet-area-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.area-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.area-number-input {
+  width: 90px;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f59e0b;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.area-number-input:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+.unit-label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.slider-track-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.carpet-area-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  cursor: pointer;
+}
+
+.carpet-area-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #141417;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.carpet-area-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-limits-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* STEP 3: ROOM CONFIGURATION STYLING */
+.room-config-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.room-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.room-category-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cat-icon {
+  font-size: 0.85rem;
+}
+
+.room-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.room-chip-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  min-width: 170px;
+  flex: 1 1 calc(25% - 12px);
+  max-width: calc(33.33% - 8px);
+}
+
+.room-chip-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  background-color: #202026;
+}
+
+.room-chip-card.checked {
+  border: 1.5px solid #f59e0b;
+  background-color: rgba(245, 158, 11, 0.06);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.1);
+}
+
+.room-chip-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-icon {
+  font-size: 1rem;
+}
+
+.room-label-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.room-checkbox-indicator {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.room-chip-card.checked .room-checkbox-indicator {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.chip-check-svg {
+  width: 11px;
+  height: 11px;
+  stroke: #121215;
+}
+
+/* BATHROOMS / TOILETS COUNTER CARD */
+.bathrooms-counter-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bathrooms-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bathrooms-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shower-icon {
+  font-size: 1.4rem;
+}
+
+.bathrooms-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bathrooms-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.bathrooms-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 12px;
+}
+
+.counter-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.counter-btn:hover {
+  background-color: rgba(217, 59, 60, 0.3);
+  color: #ffffff;
+}
+
+.counter-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f59e0b;
+  min-width: 20px;
+  text-align: center;
+}
+
+.bathroom-disclaimer-box {
+  background-color: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 2px solid #d93b3c;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.bathroom-disclaimer-text {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.bathroom-disclaimer-text strong {
+  color: #e2e8f0;
+}
+
+.tier-rates-line {
+  color: #cbd5e1;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* STEP 4: AIR CONDITIONING STYLING */
+.ac-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ac-option-card {
+  position: relative;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.ac-option-card:hover {
+  border-color: rgba(217, 59, 60, 0.45);
+  background-color: #202026;
+  transform: translateY(-2px);
+}
+
+.ac-option-card.selected {
+  border: 1.5px solid #d93b3c;
+  background-color: rgba(217, 59, 60, 0.06);
+  box-shadow: 0 4px 20px rgba(217, 59, 60, 0.15);
+}
+
+.ac-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.ac-card-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f59e0b;
+  margin: 0 0 8px 0;
+}
+
+.ac-card-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.ac-check-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  color: #d93b3c;
+}
+
+.ac-disclaimer-box {
+  background-color: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 2px solid #d93b3c;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.ac-disclaimer-text {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* 5. RIGHT SIDEBAR: YOUR LIVE ESTIMATE */
+.estimator-sidebar-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-estimate-card {
+  position: sticky;
+  top: 80px;
+  background-color: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.estimate-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.estimate-card-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.estimate-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 12px;
+}
+
+.estimate-ruler-icon {
+  width: 44px;
+  height: 44px;
+  color: #64748b;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.estimate-empty-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 220px;
+}
+
+.estimate-filled-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.estimate-main-header-box {
+  background-color: #1b1b1f;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.estimate-pkg-bhk-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f59e0b;
+  text-transform: uppercase;
+}
+
+.estimate-main-price-range {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 4px 0 0 0;
+  line-height: 1.2;
+}
+
+.excl-gst-subtext {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Itemized list */
+.estimate-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #d93b3c transparent;
+}
+
+.estimate-items-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.estimate-items-list::-webkit-scrollbar-thumb {
+  background: #d93b3c;
+  border-radius: 4px;
+}
+
+.estimate-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+}
+
+.item-row-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+}
+
+.item-row-icon {
+  font-size: 0.95rem;
+}
+
+.item-row-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.item-row-price {
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Summary Cards */
+.estimate-totals-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.summary-total-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.summary-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gst-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.gst-price {
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.grand-total-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(217, 59, 60, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.grand-total-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f59e0b;
+}
+
+.grand-total-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Call to action */
+.estimate-cta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-heading {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f59e0b;
+  margin: 0;
+  text-align: center;
+}
+
+.explore-styles-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25);
+}
+
+.explore-styles-btn:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+}
+
+.cta-subheading {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 4px 0 0 0;
+  text-align: center;
+}
+
+.consultation-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid rgba(217, 59, 60, 0.4);
+  color: #f04849;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.consultation-cta-btn:hover {
+  background: rgba(217, 59, 60, 0.15);
+  border-color: #d93b3c;
+  color: #ffffff;
+}
+
+/* AC COUNTER CARD STYLES FOR STEP 4 */
+.ac-counter-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.ac-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ac-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ac-counter-icon {
+  font-size: 1.3rem;
+}
+
+.ac-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ac-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ac-subtitle {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+/* 6. BOTTOM ENCLOSED DISCLAIMER & CONTACT FOOTER CARD */
+.estimator-bottom-card {
+  background-color: #141417;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 2px solid #d93b3c;
+  border-radius: 14px;
+  padding: 26px 28px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.bottom-card-header {
+  margin-bottom: 22px;
+}
+
+.bottom-disclaimer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.badge-warning-icon {
+  width: 13px;
+  height: 13px;
+  fill: #f59e0b;
+}
+
+.bottom-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.01em;
+}
+
+.bottom-card-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.bottom-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bottom-info-col {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.info-col-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.col-icon {
+  font-size: 0.95rem;
+}
+
+.info-bullets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-bullets-list li {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+  position: relative;
+  padding-left: 14px;
+}
+
+.info-bullets-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #d93b3c;
+  font-weight: bold;
+}
+
+/* Contact & Location Action Bar */
+.bottom-contact-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.bar-icon {
+  font-size: 1rem;
+}
+
+.bar-text {
+  color: #94a3b8;
+}
+
+.contact-link {
+  color: #d93b3c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contact-link.btn-link {
+  color: #f59e0b;
+}
+
+.contact-link.map-link {
+  color: #cbd5e1;
+}
+
+.contact-link.map-link:hover {
+  color: #f59e0b;
+}
+
+.contact-bar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 960px) {
+  .estimator-content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .live-estimate-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .progress-steps-container {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 2px;
+  }
+
+  .step-connector-line {
+    width: 24px;
+  }
+
+  .estimator-nav-row {
+    padding: 12px 20px;
+  }
+
+  .estimator-hero-section {
+    padding: 24px 20px 32px;
+  }
+
+  .bottom-info-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bottom-contact-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .contact-bar-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .estimator-main-container {
+    padding: 0 10px;
+  }
+
+  .package-cards-grid,
+  .property-form-grid,
+  .ac-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-chip-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .carpet-area-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .estimator-disclaimer-strip {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+  .estimator-brand-name {
+    font-size: 1rem;
+  }
+}
+
+/* SINGLE-LINE SLEEK COPYRIGHT FOOTER BAR */
+.estimator-copyright-bar {
+  width: 100%;
+  background-color: #060608;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: #94a3b8;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+}
+
+.highlight-brand-gold {
+  color: #f59e0b;
+  font-weight: 600;
+}

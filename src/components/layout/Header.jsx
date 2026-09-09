@@ -80,6 +80,9 @@ export default function Header() {
             <li>
               <Link to="/contact" className="nav-link">Get In Touch</Link>
             </li>
+            <li>
+              <Link to="/estimator" className="nav-link">Estimator</Link>
+            </li>
           </ul>
         </nav>
 
@@ -163,6 +166,11 @@ export default function Header() {
           <li>
             <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
               Get In Touch
+            </Link>
+          </li>
+          <li>
+            <Link to="/estimator" className="mobile-nav-link" onClick={closeMobileMenu}>
+              Estimator
             </Link>
           </li>
         </ul>
